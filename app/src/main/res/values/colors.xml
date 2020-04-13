@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#f7f8f8</color>
+    <color name="colorPrimaryDark">#f1f1f1</color>
+    <color name="colorAccent">#ffffff</color>
+    <color name="tab_selected">#eef3fe</color>
+    <color name="tab_selected_outside">#588ae9</color>
+    <color name="semi_transparent">#ccffffff</color>
+    <color name="divider">#cdcdcd</color>
+    <color name="slate_gray">#646469</color>
+    <color name="discount">#ee7c78</color>
+</resources>

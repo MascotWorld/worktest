@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:padding="20dp">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvImg"
+        android:layout_width="120dp"
+        android:layout_height="90dp"
+        app:cardCornerRadius="@dimen/cornerRadiusNormal">
+
+
+        <ImageView
+            android:id="@+id/ivImg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/image_3" />
+    </androidx.cardview.widget.CardView>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_toEndOf="@id/cvImg">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textStyle="bold"
+            tools:text="Акция Дор блю" />
+
+        <TextView
+            android:id="@+id/desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name"
+            android:ellipsize="end"
+            android:maxLines="1"
+            tools:text="Вкусный французкий сыр" />
+
+
+        <RelativeLayout
+            android:id="@+id/rlBottomLine"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true">
+
+
+            <ImageView
+                android:id="@+id/ivBusket"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                tools:src="@drawable/basket" />
+
+
+            <TextView
+                android:id="@+id/discount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@id/ivBusket"
+                android:background="@drawable/discount_bg"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:textColor="@color/colorAccent"
+                android:visibility="invisible"
+                tools:text="-50%" />
+
+            <TextView
+                android:id="@+id/new_cost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:textColor="@color/discount"
+                android:visibility="invisible"
+                tools:text="39р" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/old_cost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/rlBottomLine"
+            android:layout_alignParentEnd="true"
+            android:visibility="invisible"
+            tools:text="99р" />
+
+
+    </RelativeLayout>
+</RelativeLayout>

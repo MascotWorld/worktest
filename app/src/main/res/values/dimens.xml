@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="marginVeryLow">5dp</dimen>
+    <dimen name="marginLow">10dp</dimen>
+    <dimen name="marginNormal">15dp</dimen>
+
+  <dimen name="cornerRadiusLow">5dp</dimen>
+  <dimen name="cornerRadiusNormal">10dp</dimen>
+
+
+</resources>

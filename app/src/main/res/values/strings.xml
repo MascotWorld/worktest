@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">NapoleonItTest</string>
+
+    <string name="search_hint">Поиск</string>
+
+    <string name="tab_name_top_10">Топ 10</string>
+    <string name="tab_name_shops">Магазины</string>
+    <string name="tab_name_products">Товары</string>
+
+    <string name="discount_header">Скидки</string>
+    <string name="promotion_header">Акции</string>
+    <string name="offer_empty_desc">Без описания</string>
+    <string name="offer_price_not_available">Н/Д</string>
+    <string name="offer_price_rub">%d ₽</string>
+    <string name="offer_discount">-%d%</string>
+</resources>

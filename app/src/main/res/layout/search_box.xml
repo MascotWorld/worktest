@@ -1,0 +1,52 @@
+<androidx.cardview.widget.CardView
+    android:id="@+id/cvSearch"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    app:cardCornerRadius="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="?actionBarSize"
+    android:clickable="true"
+    android:focusable="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_marginStart="@dimen/marginLow"
+            android:id="@+id/ivSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="?actionBarSize"
+            android:src="@drawable/ic_search" />
+
+
+        <EditText
+            android:layout_marginStart="@dimen/marginLow"
+            android:backgroundTint="@android:color/transparent"
+            android:layout_toEndOf="@id/ivSearch"
+            android:layout_toStartOf="@id/ivMic"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="12sp"
+            android:fontFamily="sans-serif"
+            android:textStyle="normal"
+            android:textColor="#757575"
+            android:lineSpacingExtra="5.3sp"
+            android:hint="Поиск"
+            />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_marginEnd="@dimen/marginLow"
+            android:id="@+id/ivMic"
+            android:layout_width="wrap_content"
+            android:layout_height="?actionBarSize"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_mic_24dp" />
+
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
