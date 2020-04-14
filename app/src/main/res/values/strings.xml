@@ -13,4 +13,6 @@
     <string name="offer_price_not_available">Н/Д</string>
     <string name="offer_price_rub">%d ₽</string>
     <string name="offer_discount">-%d%</string>
+
+
 </resources>

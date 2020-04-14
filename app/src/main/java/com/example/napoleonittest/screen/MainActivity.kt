@@ -5,6 +5,7 @@ import android.graphics.Canvas
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.EditText
 import android.widget.ImageView
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
@@ -46,7 +47,6 @@ class MainActivity : AppCompatActivity() {
     lateinit var rvOffers: RecyclerView
     lateinit var info: ImageView
     lateinit var tabLayout: TabLayout
-    lateinit var cvSearch: CardView
     lateinit var refresh: SwipeRefreshLayout
 
     //data
@@ -63,6 +63,7 @@ class MainActivity : AppCompatActivity() {
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
         setContentView(R.layout.layout_main_activity)
         initViews()
+        initSearchSettings()
         getFromDB()
         loadFromNet()
 
@@ -81,7 +82,6 @@ class MainActivity : AppCompatActivity() {
         initAdapters()
         info = findViewById(R.id.ivInfo)
         tabLayout = findViewById(R.id.tabLayout)
-        // cvSearch = findViewById(R.id.cvSearch)
         refresh = findViewById(R.id.refresh)
 
         val info = findViewById<ImageView>(R.id.ivInfo)
@@ -93,7 +93,12 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    public fun onDraw(){
+    fun initSearchSettings(){
+
+        val etSearch = findViewById<EditText>(R.id.etSearch)
+        val cvSearch = findViewById<CardView>(R.id.cvSearch)
+        val ivSearch = findViewById<ImageView>(R.id.ivSearch)
+        val ivMic = findViewById<ImageView>(R.id.ivMic)
 
     }
 
@@ -113,13 +118,13 @@ class MainActivity : AppCompatActivity() {
         rvOffers.setHasFixedSize(true)
         rvOffers.isNestedScrollingEnabled = true
         rvOffers.adapter = OfferAdapter(offers)
-        val swipeController = SwipeController()
+        val swipeController = SwipeController(this,300f)
         val itemTouchhelper = ItemTouchHelper(swipeController)
         itemTouchhelper.attachToRecyclerView(rvOffers)
 
         rvOffers.addItemDecoration(object : RecyclerView.ItemDecoration(){
             override fun onDraw(c: Canvas, parent: RecyclerView, state: RecyclerView.State) {
-               // swipeController.onDraw(c)
+               swipeController.onDraw(c)
             }
         })
 

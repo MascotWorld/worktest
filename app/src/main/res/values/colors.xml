@@ -9,4 +9,6 @@
     <color name="divider">#cdcdcd</color>
     <color name="slate_gray">#646469</color>
     <color name="discount">#ee7c78</color>
+    <color name="offerClearBg">#ea3223</color>
+    <color name="textColor">#757575</color>
 </resources>

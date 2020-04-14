@@ -40,6 +40,7 @@ class OfferAdapter(list: List<Any>) : RecyclerView.Adapter<RecyclerView.ViewHold
         val new_cost: TextView = itemView.findViewById(R.id.new_cost)
         val old_cost: TextView = itemView.findViewById(R.id.old_cost)
 
+        val ivBusket = itemView.findViewById<ImageView>(R.id.ivBusket)
 
         fun onBind(position: Int, offer: Offer) {
 
